@@ -41,6 +41,6 @@ func main() {
 	fmt.Println(string(modifiedData))
 	err = ioutil.WriteFile(chartPath, modifiedData, 0644)
 	if err != nil {
-		fmt.Println(err)
+		log.Fatalf("Error writing modified data to file: %v", err)
 	}
 }
